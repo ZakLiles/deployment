@@ -19,6 +19,10 @@ app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/styles.css'))
 })
 
+app.get('/main-img', (req, res) => {
+    console.log('Get Request JS')
+    res.sendFile(path.join(__dirname, '../public/images/MonRed_1050x650.png'))
+})
 
 app.listen(port, () => {
     console.log('Docked at port ' + port)
