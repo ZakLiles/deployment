@@ -9,12 +9,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
-app.get('/js', (req, res) => {
+app.get('/main.js', (req, res) => {
     console.log('Get Request JS')
     res.sendFile(path.join(__dirname), '../public/main.js')
 })
 
-app.get('/css', (req, res) => {
+app.get('/styles.css', (req, res) => {
     console.log('Get Request JS')
     res.sendFile(path.join(__dirname), '../public/styles.css')
 })
