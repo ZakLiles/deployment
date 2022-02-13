@@ -11,12 +11,12 @@ app.get('/', (req, res) => {
 
 app.get('/js', (req, res) => {
     console.log('Get Request JS')
-    res.sendFile(path.join(__dirname), '../public/main.js')
+    res.sendFile(path.join(__dirname, '../public/main.js'))
 })
 
 app.get('/css', (req, res) => {
     console.log('Get Request JS')
-    res.sendFile(path.join(__dirname), '../public/styles.css')
+    res.sendFile(path.join(__dirname, '../public/styles.css'))
 })
 
 app.listen(port, () => {
