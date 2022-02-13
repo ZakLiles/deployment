@@ -5,12 +5,15 @@ const app = express()
 const port = process.env.PORT || 4005
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    console.log('Get Request HTML')
+    res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
 app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname), '/public/main.js')
+    console.log('Get Request JS')
+    res.sendFile(path.join(__dirname), '../public/main.js')
 })
+
 app.listen(port, () => {
     console.log('Docked at port ' + port)
 })
