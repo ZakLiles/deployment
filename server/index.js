@@ -14,6 +14,11 @@ app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname), '../public/main.js')
 })
 
+app.get('/css', (req, res) => {
+    console.log('Get Request JS')
+    res.sendFile(path.join(__dirname), '../public/styles.css')
+})
+
 app.listen(port, () => {
     console.log('Docked at port ' + port)
 })
