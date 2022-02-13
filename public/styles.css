@@ -1,0 +1,16 @@
+button {
+    width: 80px;
+    height: 80px;
+}
+
+#red {
+    background-color: #CB0104;
+}
+
+#grey {
+    background-color: #50524F;
+}
+
+#black {
+    background-color: #3B3936;
+}
