@@ -16,8 +16,8 @@ app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/styles.css'))
 })
 
-app.get('/images/:img_name', (req, res) => {
-    const {imgName} = res.params
+app.get('/images/:imgName', (req, res) => {
+    const {imgName} = req.params
     res.sendFile(path.join(__dirname, `../public/images/${imgName}`))
 })
 
