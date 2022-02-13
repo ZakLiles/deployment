@@ -5,23 +5,20 @@ const app = express()
 const port = process.env.PORT || 4005
 
 app.get('/', (req, res) => {
-    console.log('Get Request HTML')
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
 app.get('/js', (req, res) => {
-    console.log('Get Request JS')
     res.sendFile(path.join(__dirname, '../public/main.js'))
 })
 
 app.get('/css', (req, res) => {
-    console.log('Get Request JS')
     res.sendFile(path.join(__dirname, '../public/styles.css'))
 })
 
-app.get('/main-img', (req, res) => {
-    console.log('Get Request JS')
-    res.sendFile(path.join(__dirname, '../public/images/MonRed_1050x650.png'))
+app.get('/images/:img_name', (req, res) => {
+    const {imgName} = res.params
+    res.sendFile(path.join(__dirname, `../public/images/${imgName}`))
 })
 
 app.listen(port, () => {
